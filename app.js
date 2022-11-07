@@ -22,7 +22,12 @@ function secondButton(){
 }
 const namn1 = namnInput.value
 function thirdButton(){
-    const namnInput = document.querySelector("#namn").value
+    let namnInput = document.querySelector("#namn").value
+
+    if (namnInput == "Fredde" || namnInput == "Fredrik"){
+        namnInput = namnInput + " Welander"
+    }
+
     document.querySelector("#hello-output").innerText = `Morjens ${namnInput}!`
 }
 
